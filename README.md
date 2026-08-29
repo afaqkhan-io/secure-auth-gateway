@@ -5,8 +5,9 @@ A production-grade, enterprise-ready authentication API gateway engineered with 
 <!-- Badges -->
 [![Python Version](https://shields.io)](https://python.org)
 [![Framework](https://shields.io)](https://palletsprojects.com)
-[![Security](https://shields.io)]()
+[![Security](https://shields.io)](https://github.com)
 [![License: MIT](https://shields.io)](https://opensource.org)
+
 
 ## 🧠 Core Architecture Map
 * **`app.py`:** The primary microservice API layer configuring authorization endpoints, managing password validation cycles, and signing token schemas.
