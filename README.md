@@ -2,11 +2,13 @@
 
 A production-grade, enterprise-ready authentication API gateway engineered with Flask, utilizing cryptographic bcrypt password hashing systems, and enforcing strict stateful authorization layers via JSON Web Tokens (JWT) Bearer signatures.
 
-<!-- Badges -->
-[![Python Version](https://shields.io)](https://python.org)
-[![Framework](https://shields.io)](https://palletsprojects.com)
-[![Security](https://shields.io)](https://github.com)
-[![License: MIT](https://shields.io)](https://opensource.org)
+<div>
+  <strong>💻 Runtime:</strong> Python 3.8+ &nbsp;&nbsp;|&nbsp;&nbsp;
+  <strong>⚡ Framework:</strong> Flask &nbsp;&nbsp;|&nbsp;&nbsp;
+  <strong>🛡️ Security:</strong> JWT & Bcrypt &nbsp;&nbsp;|&nbsp;&nbsp;
+  <strong>📄 License:</strong> MIT
+</div>
+)
 
 
 ## 🧠 Core Architecture Map
