@@ -1,67 +1,65 @@
-# ⚡ Secure JWT Authentication Backend Gateway
+# ⚡ JWT Authentication API
 
-A production-grade, enterprise-ready authentication API gateway engineered with Flask, utilizing cryptographic bcrypt password hashing systems, and enforcing strict stateful authorization layers via JSON Web Tokens (JWT) Bearer signatures.
+A Flask authentication API demo that demonstrates password hashing with Bcrypt, JWT-based authentication, protected routes, and role checks.
 
-<div>
-  <strong>💻 Runtime:</strong> Python 3.8+ &nbsp;&nbsp;|&nbsp;&nbsp;
-  <strong>⚡ Framework:</strong> Flask &nbsp;&nbsp;|&nbsp;&nbsp;
-  <strong>🛡️ Security:</strong> JWT & Bcrypt &nbsp;&nbsp;|&nbsp;&nbsp;
-  <strong>📄 License:</strong> MIT
-</div>
-)
+`Python 3.x` · `Flask` · `PyJWT` · `Bcrypt` · `MIT License`
 
+## 🚀 Features
 
-## 🧠 Core Architecture Map
-* **`app.py`:** The primary microservice API layer configuring authorization endpoints, managing password validation cycles, and signing token schemas.
-* **`test_api.py`:** Automated simulation script testing edge credentials validation, intercepting dynamic token payloads, and querying secure assets.
+- **Password hashing:** Uses Bcrypt rather than storing plaintext passwords.
+- **JWT authentication:** Issues and validates signed JSON Web Tokens.
+- **Protected routes:** Requires a valid Bearer token for protected resources.
+- **Role checks:** Demonstrates authorization based on token claims.
+- **API testing:** Includes a test script for authentication and protected-route flows.
 
-## 🚀 Key Security Implementations
-* **Cryptographic Hashing:** Completely isolates plain text inputs by executing secure dynamic salt generations and background evaluation comparisons using Bcrypt.
-* **Decoupled Stateless Auth:** Employs cryptographically signed JSON Web Tokens (JWT) containing custom roles and exact expiry boundaries.
-* **Granular Role Clearance:** Evaluates incoming headers on secure routes to prevent layout access if authentication signatures are missing or tampered.
+## 🧩 Project Structure
 
-## 📊 Live Verification Routine Trace
-```text
---- STARTING SECURITY ROUTINE TESTING ---
-Step 1: Attempting login with correct credentials...
-✅ Token Intercepted Safely: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ...
+- `app.py` — Flask API and authentication logic.
+- `test_api.py` — API verification/demo script.
+- `requirements.txt` — Python dependencies.
 
-Step 2: Accessing secure data vault using Bearer Token...
-Vault Response: {
-  'status': 'Access Granted', 
-  'authorized_identity': 'admin_agent@enterprise.com', 
-  'role_clearance': 'SystemAdministrator', 
-  'vault_payload': {'system_status': 'Operational', 'active_connections': 14}
-}
+## 📋 Setup
+
+```bash
+git clone https://github.com/afaqkhan-io/secure-auth-gateway.git
+cd secure-auth-gateway
+python -m venv .venv
 ```
 
-## 🛠️ Tech Stack & Dependencies
-* **Python 3.8+** — Main runtime environment.
-* **Flask** — Micro-web framework hosting communication endpoints.
-* **PyJWT** — Token payload encoding and validation library.
-* **Bcrypt** — Cryptographic password protection framework.
+### Windows
 
-## 📋 Prerequisites & Local Setup
-Initialize your clean virtual framework structure before launching dependencies:
+```powershell
+.venv\Scripts\activate
+```
+
+### macOS / Linux
+
 ```bash
-python -m venv .venv
-source .venv/bin/activate  # On Windows: .venv\Scripts\activate
+source .venv/bin/activate
+```
+
+Install dependencies:
+
+```bash
 pip install -r requirements.txt
 ```
 
-## 💻 Deployment & Execution
-1. **Clone the master authentication gateway:**
-   ```bash
-   git clone https://github.com
-   ```
-2. **Navigate into the project repository:**
-   ```bash
-   cd secure-auth-gateway
-   ```
-3. **Launch the security backend infrastructure node:**
-   ```bash
-   python app.py
-   ```
+## ▶️ Run
+
+```bash
+python app.py
+```
+
+Use the included test script to exercise the authentication flow:
+
+```bash
+python test_api.py
+```
+
+## 🔐 Security Note
+
+This is a learning/demo API, not a production authentication service. Do not use demo credentials or hard-coded secrets in a real deployment. Production systems should use environment-based secret management, HTTPS, secure cookie/token policies where appropriate, rate limiting, input validation, logging, and comprehensive security testing.
 
 ## 📄 License
-Distributed under the **MIT License**. See `LICENSE` for more explicit terms.
+
+Distributed under the **MIT License**. See `LICENSE` for details.
